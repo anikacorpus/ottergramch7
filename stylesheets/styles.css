@@ -126,7 +126,7 @@ a {
   display: none;
 }
 
-.hidden-detail . thumbnail-list {
+.hidden-detail .thumbnail-list {
   flex-direction: column;
   align-items: center;
 }

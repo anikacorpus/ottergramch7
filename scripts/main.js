@@ -66,8 +66,29 @@ function addKeyPressHandler() {
     document.body.addEventListener('keyup', function(event) {
         event.preventDefault();
         console.log(event.keyCode);
+        var testARR = getThumbnailsArray();
         if (event.keyCode === ESC_KEY) {
             hideDetails();
+        }
+        else if (event.keyCode === 49) {
+          var firstThumb = testARR[0];
+          setDetailsFromThumb(firstThumb);
+        }
+        else if (event.keyCode === 50) {
+          var firstThumb = testARR[1];
+          setDetailsFromThumb(firstThumb);
+        }
+        else if (event.keyCode === 51) {
+          var firstThumb = testARR[2];
+          setDetailsFromThumb(firstThumb);
+        }
+        else if (event.keyCode === 52) {
+          var firstThumb = testARR[3];
+          setDetailsFromThumb(firstThumb);
+        }
+        else if (event.keyCode === 53) {
+          var firstThumb = testARR[4];
+          setDetailsFromThumb(firstThumb);
         }
     });
 }
@@ -75,7 +96,7 @@ function addKeyPressHandler() {
 function initializeEvents() {
     'use strict';
     var thumbnails = getThumbnailsArray();
-    thumbnails.foreach(addThumbClickHandler);
+    thumbnails.forEach(addThumbClickHandler);
     addKeyPressHandler();
 }
 
